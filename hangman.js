@@ -23,7 +23,7 @@ print();
 
 function guess(){
     let letter = document.getElementById("myLetter").value;
-    letter.toUpperCase();
+    letter = letter.toUpperCase();
     document.getElementById("myLetter").value = '';
     guessArr.push(letter);
     print();
