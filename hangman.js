@@ -4,22 +4,26 @@ console.log(wordArr);
 let guessArr = [];
 
 function print(){
-  word = 'hello';
-  wordArr = word.split('');
-  for(i=0; i<wordArr.length; i++){
-    if (wordArr[i] == ' '){
-      wordArr[i] == ' ';
+    document.getElementById("guesses").innerHTML = guessArr;
+    word = 'hello';
+    wordArr = word.split('');
+    for(i=0; i<wordArr.length; i++){
+        if (wordArr[i] == ' '){
+        wordArr[i] == ' ';
+        }
+        else if(!guessArr.includes(wordArr[i])){
+            wordArr[i] = '_';
+        }
+        
     }
-    else if(!guessArr.includes(wordArr[i])){
-        wordArr[i] = '_';
-    }
-    
-  }
-  document.getElementById("word").innerHTML = wordArr.join(' ');
+    document.getElementById("word").innerHTML = wordArr.join(' ');
 }
 
-function guess(letter){
-  guessArr.push(letter);
-  console.log(guessArr);
-  print();
+print();
+
+function guess(){
+    let letter = document.getElementById("myLetter").value;
+    document.getElementById("myLetter").value = '';
+    guessArr.push(letter);
+    print();
 }
