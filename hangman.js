@@ -1,11 +1,11 @@
-let word = 'hello';
+let word = 'HELLO';
 let wordArr = word.split('');
 console.log(wordArr);
 let guessArr = [];
 
 function print(){
     document.getElementById("guesses").innerHTML = guessArr;
-    word = 'hello';
+    word = 'HELLO';
     wordArr = word.split('');
     for(i=0; i<wordArr.length; i++){
         if (wordArr[i] == ' '){
@@ -23,6 +23,7 @@ print();
 
 function guess(){
     let letter = document.getElementById("myLetter").value;
+    letter.toUpperCase();
     document.getElementById("myLetter").value = '';
     guessArr.push(letter);
     print();
