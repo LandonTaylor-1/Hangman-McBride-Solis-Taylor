@@ -1,0 +1,40 @@
+body {
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    background-color: #F5F5F5;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+#icon {
+    margin-top: 1rem;
+}
+
+#guess {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#myLetter {
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    border-color: #F5F5F5;
+}
+
+#button {
+    margin-top: 1rem;
+    width: 100px;
+}
